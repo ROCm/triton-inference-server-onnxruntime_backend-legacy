@@ -40,7 +40,7 @@ jobs:
               bash -x ./test.sh --backends onnx --tests "L0_sequence_batcher")
 
       - name: Show Result
-        uses: peter-evans/create-or-update-comment@v1
+        uses: peter-evans/create-or-update-comment@v5
         with:
           token: ${{ secrets.PAT }}
           repository: ${{ github.event.client_payload.github.payload.repository.full_name }}
